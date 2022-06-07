@@ -1,0 +1,124 @@
+.container {
+  width: 40%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &__top {
+    grid-column: 1 / span 2;
+    padding: 3.5rem;
+
+    &__title {
+      color: var(--cyan);
+      margin-bottom: 1.5rem;
+    }
+
+    &__subtitle {
+      color: var(--bright-yellow);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &__desc {
+      color: var(--grayish-blue);
+      line-height: 1.5;
+    }
+  }
+
+  &__left {
+    background-color: var(--cyan);
+    padding: 3.5rem;
+
+    &__title {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &__info {
+      color: var(--light-gray);
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      &__price {
+        font-weight: 700;
+        font-size: 3rem;
+        color: white;
+        margin-right: 1rem;
+      }
+    }
+
+    &__desc {
+      color: var(--light-gray);
+      margin-bottom: 3rem;
+    }
+
+    &__btn {
+      width: 100%;
+      padding: 1.3rem 0;
+      background-color: var(--bright-yellow);
+      border-radius: 0.5rem;
+      border: none;
+      color: white;
+      font-weight: 700;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  &__right {
+    background-color: var(--cyan-low);
+    padding: 3.5rem;
+
+    &__title {
+      color: white;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    &__desc {
+      font-size: 1.4rem;
+      color: var(--light-gray);
+      line-height: 1.4;
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .card {
+    grid-template-columns: 1fr;
+
+    &__top {
+      grid-column: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 681px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .container {
+    width: 90%;
+  }
+}

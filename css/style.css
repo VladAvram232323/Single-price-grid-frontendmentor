@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Karla", sans-serif;
+  font-size: var(--default-font);
+  background-color: var(--light-gray);
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-low: hsl(179, 39%, 56%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --default-font: 1.6rem;
+}
+
+.container {
+  width: 40%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card__top {
+  grid-column: 1/span 2;
+  padding: 3.5rem;
+}
+.card__top__title {
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+}
+.card__top__subtitle {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.card__top__desc {
+  color: var(--grayish-blue);
+  line-height: 1.5;
+}
+.card__left {
+  background-color: var(--cyan);
+  padding: 3.5rem;
+}
+.card__left__title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.card__left__info {
+  color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card__left__info__price {
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+  margin-right: 1rem;
+}
+.card__left__desc {
+  color: var(--light-gray);
+  margin-bottom: 3rem;
+}
+.card__left__btn {
+  width: 100%;
+  padding: 1.3rem 0;
+  background-color: var(--bright-yellow);
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card__right {
+  background-color: var(--cyan-low);
+  padding: 3.5rem;
+}
+.card__right__title {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.card__right__desc {
+  font-size: 1.4rem;
+  color: var(--light-gray);
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 940px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .card__top {
+    grid-column: auto;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .container {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 681px) {
+  .container {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .container {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
